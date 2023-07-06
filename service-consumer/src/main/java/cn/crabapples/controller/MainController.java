@@ -16,7 +16,7 @@ public class MainController {
         this.service = service;
     }
 
-    @RequestMapping("hello")
+    @RequestMapping("/hello")
     public ResponseDTO hello() {
         log.info("消费者收到请求");
         return service.invokeHello();
