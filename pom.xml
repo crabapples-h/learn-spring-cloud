@@ -9,8 +9,11 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <packaging>pom</packaging>
+
     <modules>
         <module>eureka-registry-service</module>
+        <module>service-consumer</module>
+        <module>service-provider</module>
     </modules>
 
     <groupId>cn.crabapples</groupId>
@@ -18,11 +21,23 @@
     <version>0.0.1-SNAPSHOT</version>
 
     <properties>
-<!--        <java.version>11</java.version>-->
+        <!--        <java.version>11</java.version>-->
         <spring-cloud.version>Hoxton.SR10</spring-cloud.version>
     </properties>
 
     <dependencies>
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>2.0.20</version>
+        </dependency>
+        <!-- lombok -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.24</version>
+            <scope>compile</scope>
+        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>

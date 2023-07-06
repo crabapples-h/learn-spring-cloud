@@ -1,0 +1,1 @@
+GET http://192.168.3.2:6668/api/consumer/hello
