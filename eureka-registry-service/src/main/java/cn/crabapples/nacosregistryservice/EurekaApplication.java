@@ -1,4 +1,4 @@
-package cn.crabapples.eurekaregistryservice;
+package cn.crabapples.nacosregistryservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

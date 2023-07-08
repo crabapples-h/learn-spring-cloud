@@ -1,4 +1,4 @@
-package cn.crabapples.eurekaregistryservice;
+package cn.crabapples.nacosregistryservice;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
