@@ -8,3 +8,13 @@ provider.ribbon.NFLoadBalancerRuleClassName: com.alibaba.cloud.nacos.ribbon.Naco
 #ribbon.eager-load.enabled: true
 # 指定需要饥饿加载的服务名称
 #ribbon.eager-load.clients: provider
+# feignClient日志级别 NONE、BASIC、HEADERS、FULL
+feign.client.config.default.loggerLevel: none
+# 支持httpclient的开关
+feign.httpclient.enabled: true
+# 连接池最大连接数量(根据业务具体配置)
+feign.httpclient.max-connections: 200
+# 每个路径最大连接数量(根据业务具体配置)
+feign.httpclient.max-connections-per-router: 20
+logging.level:
+  cn.crabapples: debug
