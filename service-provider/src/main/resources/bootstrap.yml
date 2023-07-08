@@ -6,16 +6,10 @@ eureka.client.service-url.defaultZone:
 # nacos的地址信息
 spring.cloud.nacos.server-addr:
   moon.crabapples.cn:8848
-# 设置dd .nacos中配置文件后缀
+# 设置nacos中配置文件后缀
 spring.cloud.nacos.config.file-extension: yaml
-# 配置nacos实例集群
-spring.cloud.nacos.discovery.cluster-name: mac
-# 配置服务启动在哪个命名空间 mac
-spring.cloud.nacos.discovery.namespace: a02
-# 配置是否为临时实例(默认为true)
-spring.cloud.nacos.discovery.ephemeral: false
 # 指定使用哪个命名空间下的配置文件id
-spring.cloud.nacos.config.namespace: a02
+spring.cloud.nacos.config.namespace: a01
 
 
 

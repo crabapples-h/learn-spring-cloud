@@ -6,7 +6,7 @@ eureka.client.service-url.defaultZone:
 # nacos的地址信息
 spring.cloud.nacos.server-addr:
   192.168.3.2:8848
-# 配置nacos实例集群
-spring.cloud.nacos.discovery.cluster-name: home
 # nacos中配置文件后缀
 spring.cloud.nacos.config.file-extension: yaml
+# 指定使用哪个命名空间下的配置文件id
+spring.cloud.nacos.config.namespace: a01
