@@ -1,0 +1,12 @@
+# 服务名称(即在注册中心里显示的名字)
+spring.application.name: consumer
+# eureka的地址信息
+eureka.client.service-url.defaultZone:
+  http://192.168.3.2:20001/eureka
+# nacos的地址信息
+spring.cloud.nacos.server-addr:
+  192.168.3.2:8848
+# 配置nacos实例集群
+spring.cloud.nacos.discovery.cluster-name: home
+# nacos中配置文件后缀
+spring.cloud.nacos.config.file-extension: yaml

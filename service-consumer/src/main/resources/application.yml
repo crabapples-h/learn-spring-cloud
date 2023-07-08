@@ -1,11 +1,5 @@
-# eureka端口
-server.port: 6668
-# eureka的服务名称(即在注册中心里显示的名字)
-spring.application.name: consumer
-# eureka的地址信息
-eureka.client.service-url:
-  defaultZone:
-    http://192.168.3.2:20001/eureka
+# 端口
+server.port: 6666
 # 修改负载均衡策略(只针对某一个微服务)
 # 服务名称.ribbon.NFLoadBalancerRuleClassName: 策略
 #provider.ribbon.NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
@@ -14,5 +8,3 @@ provider.ribbon.NFLoadBalancerRuleClassName: com.alibaba.cloud.nacos.ribbon.Naco
 #ribbon.eager-load.enabled: true
 # 指定需要饥饿加载的服务名称
 #ribbon.eager-load.clients: provider
-spring.cloud.nacos.server-addr: 192.168.3.2:8848
-spring.cloud.nacos.discovery.cluster-name: home
