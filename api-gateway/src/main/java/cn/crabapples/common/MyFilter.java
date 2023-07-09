@@ -3,7 +3,6 @@ package cn.crabapples.common;
 import org.springframework.cloud.gateway.filter.GatewayFilterChain;
 import org.springframework.cloud.gateway.filter.GlobalFilter;
 import org.springframework.core.Ordered;
-import org.springframework.core.annotation.Order;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.server.reactive.ServerHttpRequest;
@@ -15,7 +14,7 @@ import reactor.core.publisher.Mono;
 import java.util.List;
 
 
-@Component
+//@Component
 // 使用Order注解和实现Ordered接口的效果一样，都是指定过滤器的优先级
 //@Order(-1)
 public class MyFilter implements GlobalFilter, Ordered {

@@ -26,3 +26,28 @@ spring.cloud.gateway:
   # 当同时存在路由过滤器和默认过滤器，且对相同属性做出修改时，路由过滤器优先级优先级高于默认过滤器
   default-filters:
     - AddRequestHeader=User,crabapples-default
+
+  # 全局跨域处理
+  globalcors:
+    # 跨域时浏览器会先发起一次options请求，配置这可以解决options请求被拦截的问题
+    add-to-simple-url-handler-mapping: true
+    corsConfigurations:
+      '[/**]':
+        # 允许哪些网站的跨域请求
+        allowedOrigins:
+          - "http://localhost:63342"
+        # 允许的跨域ajax请求方式
+        allowedMethods:
+          - "GET"
+          - "POST"
+          - "DELETE"
+          - "PUT"
+          - "OPTIONS"
+        # 允许在请求中携带的头信息
+        allowedHeaders: "*"
+        # 是否运行携带cookie
+        allowCredentials: true
+        # 这次跨域检测的有效期(单位:秒)
+        maxAge: 3600
+
+
