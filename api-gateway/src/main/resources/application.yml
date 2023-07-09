@@ -6,7 +6,7 @@ spring.cloud.nacos.config.namespace: a01
 spring.cloud.nacos.discovery.namespace: a01
 spring.cloud.nacos.config.file-extension: yaml
 # 路由配置
-spring.cloud.gateway:git
+spring.cloud.gateway:
   # 路由网关配置(数组)
   routes:
     # 路由标识，自定义，唯一即可
