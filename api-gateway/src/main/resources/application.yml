@@ -19,7 +19,10 @@ spring.cloud.gateway:
       predicates:
         # 按照路径配置，只要符合以/api/a开头的就会被路由到这里
         - Path=/api/consumer/**
+      # 路由过滤器，对当前请求生效
       filters:
         - AddRequestHeader=User,crabapples
+  # 默认过滤器，对所有请求都生效
+  # 当同时存在路由过滤器和默认过滤器，且对相同属性做出修改时，路由过滤器优先级优先级高于默认过滤器
   default-filters:
-    - AddRequestHeader=User,crabapples
+    - AddRequestHeader=User,crabapples-default
