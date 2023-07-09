@@ -5,7 +5,8 @@ eureka.client.service-url.defaultZone:
   http://192.168.3.2:20001/eureka
 # nacos的地址信息
 spring.cloud.nacos.server-addr:
-  moon.crabapples.cn:8848
+#  - moon.crabapples.cn:8848
+  - 127.0.0.1:8848
 # nacos中配置文件后缀
 spring.cloud.nacos.config.file-extension: yaml
 # 指定使用哪个命名空间下的配置文件id

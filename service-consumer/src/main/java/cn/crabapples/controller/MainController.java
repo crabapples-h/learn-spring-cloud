@@ -7,6 +7,7 @@ import cn.crabapples.service.feign.FeignService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
+import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -30,8 +31,8 @@ public class MainController {
     }
 
     @RequestMapping("/test")
-    public ResponseDTO test() {
-        log.info("消费者收到请求");
+    public ResponseDTO test(@RequestHeader(value = "User", required = false) String user) {
+        log.info("消费者收到请求,user:[{}]", user);
         return ResponseDTO.returnSuccess(test);
     }
 
