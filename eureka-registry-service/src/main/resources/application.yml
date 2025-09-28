@@ -1,9 +1,0 @@
-# eureka端口
-server.port: 20001
-# eureka的服务名称(即在注册中心里显示的名字)
-spring.application.name: eureka-server
-# eureka的地址信息
-eureka.client.service-url:
-  defaultZone:
-    http://192.168.3.4:20001/eureka
-

@@ -1,0 +1,51 @@
+wechat:
+  encodingAESKey: FspdP9MZmDHwYVgkvi1IrotwDAYYiiCUFamMiVWMgrY
+  appId: wx5e4bd217fdb0c9d4
+  token: youweilirenzhaoluohua
+  secret: 276d63a3e94b9b9907e0a8fc8214d8ee
+  getAccessTokenUrl: https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=${wechat.appId}&secret=${wechat.secret}
+  getUserInfoUrl: https://api.weixin.qq.com/cgi-bin/user/info?
+  getMediaFileUrl: https://api.weixin.qq.com/cgi-bin/media/get?
+
+dataBaseDriveV5: com.mysql.jdbc.Driver
+dataBaseDriveV8: com.mysql.cj.jdbc.Driver
+saveFileToLocal: false
+
+logging:
+  pattern:
+    level: info
+
+server:
+  port: 9999
+
+spring:
+  profiles:
+    active: dev
+  application:
+    name: wechat-official
+
+  datasource:
+    dbcp2:
+      initial-size: 20
+      max-idle: 50
+      max-total: 90
+      max-wait-millis: 500
+      min-idle: 20
+      remove-abandoned-timeout: 2
+      test-on-borrow: true
+      validation-query: SELECT 1
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  redis:
+    jedis:
+      pool:
+        max-active: 10
+  cache:
+    redis:
+      time-to-live: 60000
+  thymeleaf:
+    cache: false
+    prefix: classpath:templates/

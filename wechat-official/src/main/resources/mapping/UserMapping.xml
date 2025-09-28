@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>   
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN" "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+<mapper namespace="cn.crabapples.wechatofficial.mapper.UserMapping">
+
+	<insert id="initUser" parameterType="String">
+		insert into wechat_user (id,openid) values(#{id},#{openId})
+	</insert>
+
+	<select id="getUserByOpenId" resultType="java.util.Map">
+		select * from wechat_user where openId = #{openId}
+	</select>
+</mapper>
